@@ -1,0 +1,91 @@
+.row {
+  padding-right: 5px;
+}
+
+.row__image {
+  object-fit: contain;
+}
+
+.row__details {
+  display: flex;
+  align-items: center;
+}
+
+.row__text {
+  display: flex;
+  flex-direction: column;
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  cursor: pointer;
+  width: 16rem;
+}
+
+.row__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin-top: 1.2%;
+}
+
+.row__instructor {
+  font-size: 12px;
+  line-height: 17px;
+  color: #6a6f73;
+  font-weight: 400;
+  margin-top: 1.2%;
+}
+
+.row__ratings {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b4690e;
+  margin-top: 1.2%;
+  margin-right: 1.2%;
+  cursor: pointer;
+}
+
+.row__comments {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6a6f73;
+  margin-top: 1.2%;
+}
+
+.row__stars {
+  margin-top: 1.2%;
+  font-size: 15px !important;
+  margin-right: 1.2%;
+}
+
+.row__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1d1f;
+  margin-top: 1.2%;
+}
+
+.row__type {
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-weight: 700;
+  font-size: 12px;
+  color: #3d3c0a;
+  border: 1px solid palegoldenrod;
+  background: palegoldenrod;
+  width: 22%;
+  padding: 0.18rem;
+  margin-top: 0.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.row__typeHide {
+  display: none;
+}
+
+.row__image:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}

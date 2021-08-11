@@ -1,0 +1,134 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #fff;
+  height: auto;
+  padding: 0.7rem;
+}
+
+.navbar__logo {
+  width: 91px;
+  height: 34px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.navbar__input {
+  outline: none;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 45vw;
+  height: 7vh;
+}
+
+::placeholder {
+  padding-left: 1.6em;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  background: #f7f9fa;
+}
+
+.navbar__text {
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-size: 14px;
+  font-weight: 400;
+  color: #1c1d1f;
+}
+
+.navbar__text:hover {
+  color: #5624d0;
+  cursor: pointer;
+}
+
+.navbar__icon:hover {
+  color: #5624d0 !important;
+  cursor: pointer;
+}
+
+.navbar__menuIcon,
+.navbar__searchIcon {
+  display: none !important;
+}
+
+.navbar__hidden {
+  position: absolute;
+  left: 0;
+  top: 56px;
+  width: 76vw;
+  height: 115vh;
+  background: #f7f9fa;
+  z-index: 99;
+  height: auto;
+}
+
+.navbar__hidden h3 {
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-size: 19px;
+  font-weight: 800;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  color: #6a6f73;
+}
+
+.navbar__hidden h4 {
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+
+.hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 1090px) {
+  .navbar__ub {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .navbar__ins {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .navbar__favIcon,
+  .navbar__notificationIcon {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navbar__input,
+  .navbar__text,
+  .navbar__avatar {
+    display: none !important;
+  }
+  .navbar__menuIcon,
+  .navbar__searchIcon {
+    display: initial !important;
+    margin-right: 1em;
+  }
+  .navbar {
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .navbar__hidden h3 {
+    font-size: 18px;
+  }
+  .navbar__hidden h4 {
+    font-size: 17px;
+  }
+}

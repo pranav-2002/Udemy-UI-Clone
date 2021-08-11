@@ -1,0 +1,88 @@
+.instructorBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 3rem;
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+
+.instructorBanner img {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+}
+
+.instructorBanner__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: -9rem;
+}
+
+.instructorBanner h3 {
+  font-family: SuisseWorks, Georgia, Times, "times new roman", serif,
+    "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+  font-weight: 700;
+  font-size: 32px;
+  color: #1c1d1f;
+  margin-bottom: 0.6rem;
+}
+
+.instructorBanner p {
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-size: 19px;
+  line-height: 27px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.instructorBanner a {
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  border: 1px solid black;
+  background: black;
+  padding: 0.8rem;
+  width: 45%;
+  text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+  .instructorBanner {
+    flex-direction: column !important;
+    justify-content: space-evenly !important;
+    margin-top: 1rem;
+  }
+
+  .instructorBanner__text {
+    align-items: center !important;
+    justify-content: space-evenly !important;
+  }
+
+  .instructorBanner__text h3 {
+    font-size: 24px;
+    margin-top: 2rem;
+    margin-left: -1rem;
+  }
+  .instructorBanner__text p {
+    font-size: 14.8px;
+  }
+  .instructorBanner__text a {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .instructorBanner img {
+    width: 80%;
+    margin-left: -3rem;
+  }
+  .instructorBanner__text {
+    margin-left: 0;
+  }
+}

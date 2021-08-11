@@ -1,0 +1,24 @@
+.home {
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+.home__rows {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.home__heading {
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-weight: 700;
+  font-size: 24px;
+  color: #1c1d1f;
+  margin-bottom: 0.6%;
+}
+
+.home ::-webkit-scrollbar {
+  display: none;
+}

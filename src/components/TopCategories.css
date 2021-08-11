@@ -1,0 +1,25 @@
+.topCategories {
+  margin-top: 6%;
+  margin-left: 3.5rem;
+}
+
+.topCategories > h1 {
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-weight: 700;
+  font-size: 24px;
+  color: #1c1d1f;
+  margin-bottom: 1.4rem;
+}
+
+.topCategories__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 500px) {
+  .topCategories h1 {
+    margin-top: 3.5rem;
+  }
+}

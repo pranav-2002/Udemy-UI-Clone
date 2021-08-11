@@ -1,0 +1,66 @@
+.featuredRow h3 {
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-weight: 700;
+  font-size: 19px;
+  color: #1c1d1f;
+  margin-bottom: 1.5rem;
+}
+
+.featuredRow a {
+  color: #5624d0;
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.featuredRow p {
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-size: 14px;
+  font-weight: 400;
+  color: #6a6f73;
+  margin-bottom: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+.featuredRow__link {
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  border: 1px solid black;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.6rem;
+}
+
+.featuredRow__link:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+.featuredRow__hide {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .featuredRow {
+    padding-left: 3rem;
+  }
+  .featuredRow h3 {
+    font-size: 16px;
+  }
+  .featuredRow a {
+    font-size: 14px;
+  }
+  .featuredRow p {
+    font-size: 12px;
+  }
+  .featuredRow__link {
+    display: none !important;
+  }
+}

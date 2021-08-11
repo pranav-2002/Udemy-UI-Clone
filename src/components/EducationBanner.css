@@ -1,0 +1,9 @@
+.educationBanner__customLink {
+  width: 30% !important;
+}
+
+@media screen and (max-width: 980px) {
+  .educationBanner__customLink {
+    width: 90% !important;
+  }
+}

@@ -1,0 +1,30 @@
+.box__image {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  padding-right: 1.9rem;
+}
+
+.box__title {
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-weight: 700;
+  font-size: 16px;
+  color: #1c1d1f;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.box__image:hover {
+  transition: all ease-in-out 0.2s;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .box__image {
+    width: 80%;
+  }
+}

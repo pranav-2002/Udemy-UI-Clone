@@ -1,0 +1,72 @@
+.banner {
+  display: flex;
+  justify-content: center;
+}
+
+.banner__image {
+  position: relative;
+}
+
+.banner__image img {
+  object-fit: contain;
+  max-width: 100%;
+  min-width: auto;
+}
+
+.banner__text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  line-height: 4rem;
+  position: absolute;
+  left: 3em;
+  top: 4em;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  padding: 1.4rem;
+}
+
+.banner__text h1 {
+  font-family: "SuisseWorks", Georgia, Times, "times new roman", serif,
+    "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+  font-weight: 700;
+  font-size: 40px;
+  color: #1c1d1f;
+}
+
+.banner__text p {
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-size: 19px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #1c1d1f;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner__text {
+    top: 1.2em;
+  }
+
+  .banner__text h1 {
+    font-size: 20px;
+    line-height: 40px;
+    width: 70%;
+  }
+
+  .banner__text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner__text {
+    position: static;
+    box-shadow: none;
+  }
+}

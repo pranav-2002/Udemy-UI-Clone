@@ -1,0 +1,77 @@
+.businessBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.businessBanner__logo {
+  object-fit: contain;
+  width: 70%;
+  height: auto;
+}
+
+.businessBanner__image {
+  object-fit: contain;
+  height: auto;
+}
+
+.businessBanner__text {
+  margin-left: 3rem;
+}
+
+.businessBanner p {
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-size: 19px;
+  line-height: 27px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.businessBanner a {
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  border: 1px solid black;
+  background: black;
+  padding: 0.8rem;
+  width: 45%;
+  text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+  .businessBanner {
+    flex-direction: column-reverse !important;
+    justify-content: space-evenly !important;
+  }
+  .businessBanner__text {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .businessBanner p {
+    margin-top: 0.8rem;
+    margin-left: -1rem;
+    font-size: 14.8px;
+    line-height: 22px;
+  }
+  .businessBanner a {
+    font-size: 16px;
+    display: block;
+    width: 90%;
+    margin-left: -1rem;
+  }
+  .businessBanner__logo {
+    margin-top: 1.8rem;
+    margin-left: 1.6rem;
+  }
+  .businessBanner__image {
+    width: 80%;
+  }
+}
