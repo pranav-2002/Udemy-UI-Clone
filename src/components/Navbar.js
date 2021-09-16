@@ -39,7 +39,29 @@ function Navbar() {
     <div className="navbar">
       <MenuIcon className="navbar__menuIcon" onClick={Toggle} />
       <div className={showContent ? "navbar__hidden" : "hide"}>
-        <h3>Learn</h3>
+        {!User && (
+          <>
+            <hr />
+            <Link to="/login">
+              <h3 style={{ marginTop: "15px" }}>Login</h3>
+            </Link>
+            <Link to="/signup">
+              <h3>Sign Up</h3>
+            </Link>
+            <hr />
+          </>
+        )}
+
+        {User && (
+          <>
+            <hr />
+            <button className="m-signOut" onClick={signOutFromGoogle}>
+              <h3 style={{ marginTop: "15px" }}>Log Out</h3>
+            </button>
+            <hr />
+          </>
+        )}
+        <h3 style={{ marginTop: "10px" }}>Learn</h3>
         <h4>My learning</h4>
         <h3>Most popular</h3>
         <h4>Web Development</h4>
@@ -72,9 +94,9 @@ function Navbar() {
       />
       <p className="navbar__text navbar__ub">Udemy Business</p>
       {User && (
-        <div className="navbar__right">
+        <>
           <button onClick={signOutFromGoogle} className="navbar__logout">
-            <p className="navbar__text navbar__ins">Log out</p>
+            <p className="navbar__text navbar__ins">Log-Out</p>
           </button>
           <p className="navbar__text">My learning</p>
           <FavoriteBorderIcon className="navbar__icon navbar__favIcon" />
@@ -87,7 +109,7 @@ function Navbar() {
             className="navbar__icon navbar__avatar"
             style={{ height: 32, width: 32 }}
           />
-        </div>
+        </>
       )}
       {!User && (
         <div className="navbar__user">

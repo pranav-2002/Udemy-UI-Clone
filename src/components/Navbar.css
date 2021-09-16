@@ -19,8 +19,13 @@
   outline: none;
   border: 1px solid black;
   border-radius: 25px;
-  width: 45vw;
-  height: 7vh;
+  width: 40%;
+  height: 3rem;
+}
+
+.navbar input[type="text"] {
+  font-size: 16px;
+  padding-left: 0.5rem;
 }
 
 ::placeholder {
@@ -99,10 +104,8 @@ input[type="text"] {
 
 .navbar__logout {
   outline: none;
-  border: 1px solid white;
-  background: black;
-  padding: 0.3rem 0.6rem;
-  border-radius: 5px;
+  background: none;
+  border: none;
 }
 
 .navbar__ins {
@@ -111,12 +114,8 @@ input[type="text"] {
     "segoe ui emoji", "segoe ui symbol";
   font-size: 16px;
   font-weight: 700;
-  color: white;
+  color: #a435f0;
   font-size: 15px;
-}
-
-.navbar__ins:hover {
-  color: white;
 }
 
 .navbar__login {
@@ -148,19 +147,6 @@ input[type="text"] {
   color: unset;
 }
 
-.navbar__right {
-  display: flex;
-  align-items: center;
-}
-
-.navbar__right > * {
-  margin-right: 0.8em;
-}
-
-.navbar__avatar {
-  margin-right: -0.1rem;
-}
-
 .navbar__user > .navbar__icon {
   margin-left: -1.5rem;
   margin-right: 1.5rem;
@@ -168,6 +154,13 @@ input[type="text"] {
 
 .navbar__login:hover {
   background: whitesmoke;
+}
+
+.m-signOut {
+  outline: none;
+  background: white;
+  padding: 0.1rem 1rem;
+  border: none;
 }
 
 @media screen and (max-width: 1090px) {

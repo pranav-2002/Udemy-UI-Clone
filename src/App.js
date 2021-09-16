@@ -22,6 +22,7 @@ import SignUp from "./components/SignUp";
 function App() {
   const [User, setUser] = useState(false);
   const history = useHistory();
+
   return (
     <div className="App">
       <UserContext.Provider value={{ User, setUser }}>

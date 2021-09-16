@@ -1,0 +1,82 @@
+.signUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  padding-bottom: 5%;
+}
+
+.signUp__inputs {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 1.2rem;
+  width: 25%;
+}
+
+.signUp__inputs > input {
+  height: 2.8rem;
+  outline: none;
+  border: 1px solid black;
+  background: white;
+}
+
+.signUp__text {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.signUp__inputs > button {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: #a435f0;
+  color: white;
+  padding: 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.signUp__inputs > button:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.signUp__section {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.signUp__section p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.signUp__section a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 0.5rem;
+}
+
+.signUp__inputs > input[type="text"] {
+  font-size: 18px;
+  padding-left: 0.5rem;
+}
+
+.signUp__inputs > input[type="password"] {
+  font-size: 18px;
+  padding-left: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .signUp__inputs {
+    width: 80%;
+  }
+}
