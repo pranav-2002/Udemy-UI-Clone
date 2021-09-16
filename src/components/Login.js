@@ -12,7 +12,7 @@ function Login() {
   const [email, setEmail] = useState("");
 
   const signInWithGoogle = () => {
-    let google_provider = new firebase.auth.GoogleAuthProvider();
+    const google_provider = new firebase.auth.GoogleAuthProvider();
     firebase
       .auth()
       .signInWithPopup(google_provider)
@@ -37,6 +37,19 @@ function Login() {
       });
   };
 
+  const signInWithFacebook = () => {
+    const facebook_provider = new firebase.auth.FacebookAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(facebook_provider)
+      .then((user) => {
+        history.push("/");
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
+
   return (
     <>
       <Navbar />
@@ -49,6 +62,15 @@ function Login() {
             />
             <h4>Continue with Google</h4>
           </button>
+
+          <button onClick={signInWithFacebook} className="login__option">
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png"
+              alt="facebook"
+            />
+            <h4>Continue with Facebook</h4>
+          </button>
+
           <div className="login__inputs">
             <input
               type="text"
