@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
@@ -7,6 +7,9 @@ import Avatar from "@material-ui/core/Avatar";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { firebase } from "../firebase";
+import { UserContext } from "./Contexts/UserContext";
 
 function Navbar() {
   const [showContent, setShowContent] = useState(false);
@@ -14,6 +17,23 @@ function Navbar() {
   function Toggle() {
     setShowContent(!showContent);
   }
+
+  const history = useHistory();
+
+  const signOutFromGoogle = () => {
+    firebase.auth().signOut();
+    history.push("/login");
+  };
+
+  const { User, setUser } = useContext(UserContext);
+
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      setUser(true);
+    } else {
+      setUser(false);
+    }
+  });
 
   return (
     <div className="navbar">
@@ -37,11 +57,13 @@ function Navbar() {
         <h4>Invite friends</h4>
         <h4>Help</h4>
       </div>
-      <img
-        src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
-        alt="logo"
-        className="navbar__logo"
-      />
+      <Link to="/">
+        <img
+          src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+          alt="logo"
+          className="navbar__logo"
+        />
+      </Link>
       <p className="navbar__text">Categories</p>
       <input
         type="text"
@@ -49,19 +71,36 @@ function Navbar() {
         className="navbar__input"
       />
       <p className="navbar__text navbar__ub">Udemy Business</p>
-      <p className="navbar__text navbar__ins">Instructor</p>
-      <p className="navbar__text">My learning</p>
-      <FavoriteBorderIcon className="navbar__icon navbar__favIcon" />
-      <div className="navbar__mediaSet">
-        <SearchIcon className="navbar__searchIcon" />
-        <ShoppingCartOutlinedIcon className="navbar__icon" />
-      </div>
-      <NotificationsNoneIcon className="navbar__icon navbar__notificationIcon" />
-      <Avatar
-        src="https://img-c.udemycdn.com/user/75x75/151055002_8c2b.jpg"
-        className="navbar__icon navbar__avatar"
-        style={{ height: 32, width: 32 }}
-      />
+      {User && (
+        <div className="navbar__right">
+          <button onClick={signOutFromGoogle} className="navbar__logout">
+            <p className="navbar__text navbar__ins">Log out</p>
+          </button>
+          <p className="navbar__text">My learning</p>
+          <FavoriteBorderIcon className="navbar__icon navbar__favIcon" />
+          <div className="navbar__mediaSet">
+            <SearchIcon className="navbar__searchIcon" />
+            <ShoppingCartOutlinedIcon className="navbar__icon" />
+          </div>
+          <NotificationsNoneIcon className="navbar__icon navbar__notificationIcon" />
+          <Avatar
+            className="navbar__icon navbar__avatar"
+            style={{ height: 32, width: 32 }}
+          />
+        </div>
+      )}
+      {!User && (
+        <div className="navbar__user">
+          <SearchIcon className="navbar__searchIcon" />
+          <ShoppingCartOutlinedIcon className="navbar__icon" />
+          <Link to="/login">
+            <p className="navbar__login">Log in</p>
+          </Link>
+          <Link to="/signup">
+            <p className="navbar__signup">Sign up</p>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

@@ -5,6 +5,7 @@
   background: #fff;
   height: auto;
   padding: 0.7rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .navbar__logo {
@@ -91,6 +92,84 @@ input[type="text"] {
   display: none !important;
 }
 
+.navbar__user {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logout {
+  outline: none;
+  border: 1px solid white;
+  background: black;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+}
+
+.navbar__ins {
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  font-size: 15px;
+}
+
+.navbar__ins:hover {
+  color: white;
+}
+
+.navbar__login {
+  font-size: 14px;
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-weight: 700;
+  border: 1px solid black;
+  padding: 0.6rem 1.2rem;
+  background: white;
+}
+
+.navbar__signup {
+  font-size: 14px;
+  font-family: "sf pro text", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+  font-weight: 700;
+  border: 1px solid black;
+  padding: 0.6rem 1.2rem;
+  background: black;
+  color: white;
+  margin-left: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: unset;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__right > * {
+  margin-right: 0.8em;
+}
+
+.navbar__avatar {
+  margin-right: -0.1rem;
+}
+
+.navbar__user > .navbar__icon {
+  margin-left: -1.5rem;
+  margin-right: 1.5rem;
+}
+
+.navbar__login:hover {
+  background: whitesmoke;
+}
+
 @media screen and (max-width: 1090px) {
   .navbar__ub {
     display: none;
@@ -98,8 +177,17 @@ input[type="text"] {
 }
 
 @media screen and (max-width: 920px) {
-  .navbar__ins {
+  .navbar__ins,
+  .navbar__logout {
     display: none;
+  }
+  .navbar__login,
+  .navbar__signup {
+    display: none;
+  }
+  .navbar__user > .navbar__icon {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

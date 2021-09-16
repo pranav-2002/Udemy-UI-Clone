@@ -6,7 +6,7 @@ function Banner() {
     <div className="banner">
       <div className="banner__image">
         <img
-          src="https://img-c.udemycdn.com/notices/web_banner/image_udlite/9f3d2c00-09e9-43ac-9417-4bcfea569bd9.jpg"
+          src="https://img-c.udemycdn.com/notices/web_banner/image_udlite/92a752b4-2f5b-45c7-a451-d84b32ccb0cf.jpg"
           alt="banner"
         />
         <div className="banner__text">
