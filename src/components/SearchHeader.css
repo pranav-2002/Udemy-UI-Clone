@@ -1,0 +1,52 @@
+.searchHeader {
+  font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
+    "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
+    "segoe ui emoji", "segoe ui symbol";
+}
+
+.searchHeader h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.searchHeader h4 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.searchHeader h4 span {
+  color: #5624d0;
+}
+
+.searchHeader__component {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  border: 2px solid #e5e8eb;
+  padding: 1.15rem 1rem;
+  width: 92%;
+}
+
+.searchHeader__component h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.helpIcon {
+  height: 28px !important;
+  width: 28px !important;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .searchHeader h1 {
+    font-size: 1.4rem;
+  }
+  .searchHeader h4 {
+    font-size: 1.1rem;
+  }
+  .searchHeader__component h3 {
+    font-size: 1rem;
+  }
+}

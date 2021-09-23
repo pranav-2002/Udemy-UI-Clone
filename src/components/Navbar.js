@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
@@ -35,6 +35,20 @@ function Navbar() {
     }
   });
 
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleEnter = (event) => {
+    if (event.keyCode === 13 && searchInput.length > 0) {
+      history.push(`/search/${searchInput}`);
+      setSearchInput("");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keyup", handleEnter);
+    return () => window.removeEventListener("keyup", handleEnter);
+  });
+
   return (
     <div className="navbar">
       <MenuIcon className="navbar__menuIcon" onClick={Toggle} />
@@ -67,7 +81,7 @@ function Navbar() {
         <h4>Web Development</h4>
         <h4>Mobile Development</h4>
         <h4>Game development</h4>
-        <h4>Enterpreneurship development</h4>
+        <h4>Entrepreneurship development</h4>
         <h4>Business Analytics</h4>
         <h4>Digital Marketing</h4>
         <h4>Graphic Design</h4>
@@ -91,6 +105,9 @@ function Navbar() {
         type="text"
         placeholder="Search for anything"
         className="navbar__input"
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+        onKeyPress={handleEnter}
       />
       <p className="navbar__text navbar__ub">Udemy Business</p>
       {User && (
@@ -113,7 +130,9 @@ function Navbar() {
       )}
       {!User && (
         <div className="navbar__user">
-          <SearchIcon className="navbar__searchIcon" />
+          <Link to={`/search/python`}>
+            <SearchIcon className="navbar__searchIcon" />
+          </Link>
           <ShoppingCartOutlinedIcon className="navbar__icon" />
           <Link to="/login">
             <p className="navbar__login">Log in</p>
